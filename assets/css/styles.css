@@ -1,0 +1,141 @@
+/*======= GOOGLE FONTS =======*/
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+/*======= VARIABLES CSS =======*/
+
+:root {
+    /*--- Colors ---*/
+    --white-color: white;
+    --green-color: hsl(158, 36%, 37%) ;
+    --black-color: hsl(228, 12%, 48%);
+    --background-body:  hsl(30, 38%, 92%);
+
+    /*--- Font family ---*/
+    --body-font: Montserrat;
+    --font-title: Fraunces;
+    /*--- Font sizes ---*/
+    --h2-fs: ;
+    --normal-fs: 14px ;
+    --prix-fs: ;
+
+    /*--- Font weight ---*/
+    --medium: 500;
+    --bold: 700;
+}
+
+/*======= BASE =======*/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+input,
+button,
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-fs);
+    background-color: var(--background-body);
+}
+
+body {
+    color: var(--black-color);
+    font-size: var(--normal-fs);
+    font-family: var(--body-font);
+}
+
+input,
+button {
+    outline: none;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    font-weight: var(--bold);
+    font-family: var(--font-title);
+    font-size: 2.2rem;
+}
+
+.button
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: var(--green-color);
+    color: var(--white-color);
+    width: 100%;
+    border-radius: 5px;
+    padding: 15px;
+    transition: 0.5s;
+}
+
+.button:hover
+{
+    background-color: hsl(157, 37%, 25%);
+    transition: 0.5s;
+}
+
+.img-product
+{
+    background-image:url(../img/image-product-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.card-preview
+{
+    display: grid;
+    width: 90vh;
+    min-height: 65vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    grid-template-columns: repeat(2, 1fr);
+    background-color: var(--white-color);
+    border-radius: 10px;
+}
+
+.info-product
+{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.title-product
+{
+    color: black;
+}
+
+.description-product
+{
+    line-height: 1.5rem;
+}
+
+.display-prix
+{
+    display: flex;
+    align-items: center;
+}
+
+.prix-product
+{
+    color: var(--green-color);
+    font-weight: var(--bold);
+    font-family: var(--font-title);
+    font-size: 2.2rem;
+    margin-right: 20px;
+}
+
+.remise-product
+{
+    text-decoration : line-through;
+}
